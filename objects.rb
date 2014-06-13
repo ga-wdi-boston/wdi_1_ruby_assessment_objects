@@ -13,7 +13,7 @@ end
 # Then add an initializer to the `Pet` class that accepts a "name" argument
 # and stores the value as an instance variable.
 class Pet
-  def initalize(name)
+  def initialize(name)
     @name = name
   end
 end
