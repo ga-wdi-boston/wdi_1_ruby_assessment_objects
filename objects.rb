@@ -14,7 +14,7 @@ end
 # Then add an initializer to the `Pet` class that accepts a "name" argument
 # and stores the value as an instance variable.
 class Pet
-  def initializer(name)
+  def initialize(name)
     @name = name
   end
 end
@@ -29,8 +29,8 @@ end
 # Then add an instance method called `bark` to the `Dog` class that returns the
 # string "bark bark".
 class Pet
-  attr_accessor @name
-  def initializer(name)
+  attr_accessor :name
+  def initialize(name)
     @name = name
   end
 end
