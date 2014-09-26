@@ -8,6 +8,7 @@ end
 class Dog < Pet
 end
 
+# CORRECTION: don't need attr_accessor (line 5)
 
 # #### Question 2
 # # Copy your class definitions from question 1 here.
@@ -26,6 +27,7 @@ end
 class Dog < Pet
 end
 
+# CORRECTION: still don't need attr_accessor (line 19)
 
 #### Question 3
 # Copy your class definitions from question 2 here.
@@ -53,6 +55,7 @@ class Dog < Pet
 
 end
 
+# CORRECTION: don't need attr_accessor; don't need second initialize method bc that is redundant (lines 48-50)
 
 #### Question 4
 # Write code that would create a new instance of the `Dog` class with the
@@ -60,6 +63,8 @@ end
 
 new_dog = Dog.new("Lassie")
 new_dog.bark
+
+# Fully correct
 
 #### Question 5
 # Write code to create a new array containing 3 dog names (as strings).
@@ -76,3 +81,5 @@ dog_array.push(@lilly.name, @bowser.name, @lassie.name)
 new_array = dog_array.map do |name|
              "#{name} is a good dog!"
             end
+
+# Fully correct (though they really just wanted the names)
