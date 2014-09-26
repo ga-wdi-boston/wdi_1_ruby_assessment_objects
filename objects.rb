@@ -43,7 +43,7 @@ end
 
 class Dog < Pet
   def bark
-    puts "bark bark"
+    "bark bark"
   end
 end
 
@@ -54,6 +54,7 @@ end
 
 lassie = Dog.new("Lassie")
 lassie.bark
+# i'm assuming you don't want to print it
 
 #### Question 5
 # Write code to create a new array containing 3 dog names (as strings).
