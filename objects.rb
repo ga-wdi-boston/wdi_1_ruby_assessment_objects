@@ -18,8 +18,6 @@ end
 
 class Pet
 
-  attr_accessor :name
-
 def initialize (name)
   @name = name
 end
@@ -39,7 +37,6 @@ end
 
 class Pet
 
-attr_accessor :name
 
 def initialize (name)
   @name = name
@@ -48,8 +45,6 @@ end
 end
 
 class Dog < Pet
-
-  attr_accessor :name
 
 def initialize (name)
  super Pet
