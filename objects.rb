@@ -1,20 +1,12 @@
 #### Question 1
 # Define a class called `Pet`, and a class `Dog` that inherits from `Pet`.
 
-class Pet
-  attr_accessor :age, :gender, :size
+    #### CORRECTION: Deleted unnecessary code throughout. Note: Generally, don't write any code that's not absolutely necessary, i.e. use attr_accessor only on instance variables you're going to actually USE. ALSO -- very necessary in terms of keeping instance variables secure and intentionally private, that should not be accessible by the user.
 
-  def initialize (age=0, gender, size)
-    @age = age
-  end
+class Pet
 end
 
 class Dog < Pet
-  attr_accessor :breed
-
-  def initialize (breed)
-    @breed = breed
-  end
 end
 
 
@@ -24,19 +16,12 @@ end
 # and stores the value as an instance variable.
 
 class Pet
-  attr_accessor :name
-
   def initialize (name)
     @name = name
   end
 end
 
 class Dog < Pet
-  attr_accessor :breed
-
-  def initialize (breed)
-    @breed = breed
-  end
 end
 
 
@@ -45,22 +30,16 @@ end
 # Then add an instance method called `bark` to the `Dog` class that returns the
 # string "bark bark".
 
+    #### CORRECTION: Didn't use initialize under Dog class correctly. Dog inherits the initialize from Pet so can pass a name to a new Dog directly.
+
 
 class Pet
-  attr_accessor :name
-
   def initialize (name)
     @name = name
   end
 end
 
 class Dog < Pet
-  attr_accessor :breed, :dog_speak
-
-  def initialize (breed)
-    @breed = breed
-  end
-
   def bark(dog_speak="bark bark")
     @dog_speak = dog_speak
   end
@@ -72,48 +51,19 @@ end
 # Write code that would create a new instance of the `Dog` class with the
 # name "Lassie", and call the `bark` method on it.
 
-my_pet = Pet.new "Rocky"
 my_dog = Dog.new "Pitbull"
 
 my_dog.bark
-
-
-
 
 #### Question 5
 # Write code to create a new array containing 3 dog names (as strings).
 # Then write code to add the string "is a good dog!" to every name.
 # Save the result in a new array, but don't output anything to the Terminal.
 
-class Pet
-  attr_accessor :name
 
-  def initialize (name)
-    @name = name
-  end
-end
+all_dogs = ["Fluffy", "Buster", "Rocky"]
 
-class Dog < Pet
-  attr_accessor :breed, :dog_speak
-
-  def initialize (breed)
-    @breed = breed
-  end
-
-  def bark(dog_speak="bark bark")
-    @dog_speak = dog_speak
-  end
-end
-
-my_pet = Pet.new "Rocky"
-
-jon_pet = Pet.new "Buster"
-
-kate_pet = Pet.new "Fluffy"
-
-all_pets = [my_pet.name, jon_pet.name, kate_pet.name]
-
-good_pets = all_pets.map do |pet|
-              "#{pet} is a good dog!"
+good_dogs = all_dogs.map do |dog|
+              "#{dog} is a good dog!"
             end
 
