@@ -1,9 +1,11 @@
 #### Question 1
 # Define a class called `Pet`, and a class `Dog` that inherits from `Pet`.
+
+# Got this wrong, the inheritance syntax should only be 1 "<"
 class Pet
 end
 
-class Dog << Pet
+class Dog < Pet
 end
 
 #### Question 2
@@ -16,8 +18,8 @@ class Pet
   end
 end
 
-class Dog << Pet
-  def initialize(name="Fido")
+class Dog < Pet
+  def initialize(name="Fido") #Although not wrong, this wasn't in the specs..
     @name = name
   end
 end
@@ -33,7 +35,7 @@ class Pet
   end
 end
 
-class Dog << Pet
+class Dog < Pet
 
   def bark
     return "BARK BARK!!"
