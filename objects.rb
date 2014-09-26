@@ -36,12 +36,12 @@ class Pet
 end
 
 class Dog < Pet
-  attr_accessor :bark
+  # attr_accessor :bark
 
-  def initialize(name)
-    @name = name
-    @bark = bark
-  end
+  # def initialize(name)    # don't need this here - it is inherited from Pet
+  #   @name = name
+  #   @bark = bark
+  # end
 
   def bark
     "bark bark"
@@ -54,6 +54,8 @@ end
 
 new_dog = Dog.new("Lassie").bark
 
+
+
 #### Question 5
 # Write code to create a new array containing 3 dog names (as strings).
 # Then write code to add the string "is a good dog!" to every name.
@@ -65,6 +67,5 @@ good_puppies = dog_names.map do |pup|
                  pup + " is a good dog!"
                end
 
-puts good_puppies
-
+# had puts as a test, forgot to take out
 
