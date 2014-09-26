@@ -6,10 +6,10 @@ class Pet
 end
 
 class Dog < Pet
-def initialize
- super Pet
+
 end
-end
+ # Corrected
+
 
 # #### Question 2
 # # Copy your class definitions from question 1 here.
@@ -18,6 +18,8 @@ end
 
 class Pet
 
+  attr_accessor :name
+
 def initialize (name)
   @name = name
 end
@@ -25,11 +27,10 @@ end
 end
 
 class Dog < Pet
-def initialize
- super Pet(name)
-end
+
 end
 
+# Corrected
 #### Question 3
 # Copy your class definitions from question 2 here.
 # Then add an instance method called `bark` to the `Dog` class that returns the
@@ -60,7 +61,7 @@ end
  end
 
 end
-
+# corected
 #### Question 4
 # Write code that would create a new instance of the `Dog` class with the
 # name "Lassie", and call the `bark` method on it.
