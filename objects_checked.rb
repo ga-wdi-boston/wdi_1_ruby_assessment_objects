@@ -6,6 +6,9 @@ end
 class Dog < Pet
 end
 
+# Correct
+
+
 #### Question 2
 # Copy your class definitions from question 1 here.
 # Then add an initializer to the `Pet` class that accepts a "name" argument
@@ -18,6 +21,8 @@ end
 
 class Dog < Pet
 end
+
+# Correct
 
 #### Question 3
 # Copy your class definitions from question 2 here.
@@ -36,11 +41,17 @@ class Dog < Pet
 	end
 end
 
+# Correct. But for the sake of effective coding:
+# altough return is not giving an error, it is not necessary to put return because without return, the method returns already.
+# So, I would remove the return and attr_accessor since we do not access anything.
+
 #### Question 4
 # Write code that would create a new instance of the `Dog` class with the
 # name "Lassie", and call the `bark` method on it.
 my_pet = Dog.new("Leslie")
 my_pet.bark
+
+# Correct
 
 #### Question 5
 # Write code to create a new array containing 3 dog names (as strings).
@@ -51,6 +62,10 @@ dog_names = ["soda", "thunder", "mr"]
 sentence = dog_names.map do |name|
 	"#{name} is a good dog!"
 end
+
+# Correct
+
+# Score 5/5
 
 # Cenk Yurtbilir
 
