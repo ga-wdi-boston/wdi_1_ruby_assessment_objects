@@ -26,16 +26,31 @@ end
 class Dog < Pet
 
   end
+#                           Corrected code and comments below line
+  #---------------------------------------------------------------------------------
 
+class Pet
+# Removed attr_accessor :name
+
+def initialize(name) #added argument(name)
+  @name = name
+end
+
+end
+
+
+class Dog < Pet
+
+  end
 #### Question 3
 # Copy your class definitions from question 2 here.
 # Then add an instance method called `bark` to the `Dog` class that returns the
 # string "bark bark".
 
 class Pet
-attr_accessor :name
+#attr_accessor :name
 
-  def initialize
+  def initialize(name)
    @name = name
   end
 end
@@ -51,28 +66,52 @@ end
   end
 end
 
-#### Question 4
-# Write code that would create a new instance of the `Dog` class with the
-# name "Lassie", and call the `bark` method on it.
-
+           #           Corrected Code below this line
+#---------------------------------------------------------------------------
 class Pet
-attr_accessor :name
+#attr_accessor :name
 
-def initialize(name)
-  @name = name
-end
-
+  def initialize(name)
+   @name = name
+  end
 end
 
 
 class Dog < Pet
-def initialize(name)
-super(name)
-end
-def bark
-  "bark bark"
+
+# def initialize --> I did not need this initialize: it is implicit in the inheritance.
+#   super(name)
+# end
+
+  def bark
+    "bark bark"
   end
 end
+
+#### Question 4
+# Write code that would create a new instance of the `Dog` class with the
+# name "Lassie", and call the `bark` method on it.
+#--------------------------------------------------------------------------------
+                  # I didn't need all the code from the last seciton, only the Lassie ininstantiation
+# class Pet
+# #attr_accessor :name
+
+#   def initialize(name)
+#    @name = name
+#   end
+# end
+
+
+# class Dog < Pet
+
+# # def initialize --> I did not need this initialize: it is implicit in the inheritance.
+# #   super(name)
+# # end
+
+#   def bark
+#     "bark bark"
+#   end
+# end
 
   Lassie = Dog.new"Lassie"
 
@@ -86,3 +125,13 @@ end
 dog_names = ["Perry", "Jendaya", "Marcos"]
 
 dog_names_good_dog = dog_names.map {|name| name + "is a good dog!"}
+
+
+
+
+
+
+
+
+
+
