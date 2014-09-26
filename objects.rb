@@ -29,6 +29,8 @@ end
 # string "bark bark".
 
 class Pet
+  # attr_accessor :name
+
   def initialize(name)
     @name = name
   end
@@ -36,7 +38,7 @@ end
 
 class Dog < Pet
   def bark
-    puts "bark bark"
+    puts "bark bark"  #could leave out puts and just have "bark bark"
   end
 end
 
@@ -45,8 +47,11 @@ end
 # Write code that would create a new instance of the `Dog` class with the
 # name "Lassie", and call the `bark` method on it.
 
-poodle = Dog.new("Lassie")
+poodle = Dog.new("Lassie")  # Could write this as Dog.new "Lassie" too.
 poodle.bark
+
+# poodle.name
+# poodle.name = "Foo"  # notes on resetting the attr_accessor if needed.
 
 
 #### Question 5
@@ -61,5 +66,5 @@ new_names = names.map do |name|
               name + " is a good dog!"
             end
 
-puts new_names
+# puts new_names
 
