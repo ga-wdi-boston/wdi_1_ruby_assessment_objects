@@ -1,5 +1,4 @@
 #### Question 1
-require 'pry'
 # Define a class called `Pet`, and a class `Dog` that inherits from `Pet`.
 class Pet
 
@@ -87,4 +86,3 @@ end
 dog_names = ["Perry", "Jendaya", "Marcos"]
 
 dog_names_good_dog = dog_names.map {|name| name + "is a good dog!"}
-binding.pry
