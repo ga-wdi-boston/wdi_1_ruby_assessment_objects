@@ -6,6 +6,11 @@ end
 class Dog << Pet
 end
 
+#corrected answer(one < to create inheritance)
+
+class Dog < Pet
+  end
+
 #### Question 2
 # Copy your class definitions from question 1 here.
 # Then add an initializer to the `Pet` class that accepts a "name" argument
@@ -13,28 +18,41 @@ end
 class Pet
 attr_acessor :name
   @name
-
 end
 
 class Dog << Pet
 end
+=begin
 
+Correct version
+
+class Pet
+  def initialize(name)
+    @name = name
+  end
+end
+
+=end
 
 #### Question 3
 # Copy your class definitions from question 2 here.
 # Then add an instance method called `bark` to the `Dog` class that returns the
 # string "bark bark".
 class Pet
-attr_acessor :name
-  @name
-
-def bark
-  puts "bar bark"
-
+  def initialize(name)
+    @name = name
+  end
 end
 
-class Dog << Pet
+class Dog < Pet
+  attr_acessor :name
+
+  def bark
+    puts "bar bark"
+  end
 end
+
+
 
 
 #### Question 4
@@ -49,12 +67,12 @@ def bark
 
 end
 
-class Dog << Pet
+class Dog < Pet
 end
 
-Lassie = Dog.new
+dog = Dog.new "Lassie"
 
-Lassie.bark
+dog.bark
 
 
 #### Question 5
@@ -64,9 +82,9 @@ Lassie.bark
 
 doggies = ["spot", "fido", "dino"]
 
-doggies.map! do |dog|
+  new_doggies = doggies.map do |dog|
 
-  puts dog + "is a good dog!"
+  dog + "is a good dog!"
 
 end
 
