@@ -16,7 +16,14 @@ end
 
 class Pet
 
-  attr_accessor :name
+  # attr_accessor :name
+  # ^ nice to have, but we may not HAVE to access or set the name
+  # it's an automatic practice that i stick with "just in case",
+  # which not might be very Agile,
+  # but it's saved my butt before when working with Rails.
+  # (or, more like, i specifically do it because
+  # i have lost my butt before cause of it when working with Rails.)
+  # now that i think about it, that's not always a good idea...
 
   def initialize(name)
     @name = name
@@ -32,13 +39,9 @@ end
 # string "bark bark".
 
 class Pet
-
-  attr_accessor :name
-
   def initialize(name)
     @name = name
   end
-
 end
 
 class Dog < Pet
@@ -54,7 +57,7 @@ end
 
 lassie = Dog.new("Lassie")
 lassie.bark
-# i'm assuming you don't want to print it
+# i'm assuming you don't want to print it.
 
 #### Question 5
 # Write code to create a new array containing 3 dog names (as strings).
