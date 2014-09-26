@@ -4,15 +4,9 @@ require 'pry'
 # Define a class called `Pet`, and a class `Dog` that inherits from `Pet`.
 
 class Pet
-  def speak
-    puts "*generic noise*"
-  end
 end
 
 class Dog < Pet
-  def speak
-    puts "BARK"
-  end
 end
 
 #### Question 2
@@ -27,16 +21,9 @@ class Pet
   def initialize(name)
     @name = name
   end
-
-  def speak
-    puts "*generic noise*"
-  end
 end
 
 class Dog < Pet
-  def speak
-    puts "BARK"
-  end
 end
 
 #### Question 3
