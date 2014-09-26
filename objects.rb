@@ -1,13 +1,13 @@
 require 'pry'
 #### Question 1
 # Define a class called `Pet`, and a class `Dog` that inherits from `Pet`.
-# class Pet
+class Pet
 
-# end
+end
 
-# class Dog < Pet
+class Dog < Pet
 
-# end
+end
 
 #### Question 2
 # Copy your class definitions from question 1 here.
