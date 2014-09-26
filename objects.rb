@@ -1,3 +1,5 @@
+require 'pry'
+
 #### Question 1
 # Define a class called `Pet`, and a class `Dog` that inherits from `Pet`.
 
@@ -71,8 +73,10 @@ lassie.bark
 # Then write code to add the string "is a good dog!" to every name.
 # Save the result in a new array, but don't output anything to the Terminal.
 
-dog_names = Array.new(3, "Anonymous Fido")
+dog_names = ["Fido", "Rover", "Spot"]
 
 these_dogs_are_good_dogs = dog_names.map do |name|
   name << " is a good dog!"
 end
+
+binding.pry
