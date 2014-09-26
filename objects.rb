@@ -16,7 +16,7 @@ require 'pry'
 # and stores the value as an instance variable.
 
 # class Pet
-# 	attr_accessor :name
+# 	attr_accessor :name #unnecessary at this point
 # 	def initialize(name)
 # 		@name = name
 # 	end
@@ -32,7 +32,7 @@ require 'pry'
 # string "bark bark".
 
 # class Pet
-# 	attr_accessor :name
+# 	attr_accessor :name # not necessary. 
 # 	def initialize(name)
 # 		@name = name
 # 	end
@@ -49,7 +49,7 @@ require 'pry'
 # name "Lassie", and call the `bark` method on it.
 
 # class Pet
-# 	attr_accessor :name
+# 	attr_accessor :name # still don't need this
 # 	def initialize(name)
 # 		@name = name
 # 	end
@@ -102,5 +102,12 @@ new_pet = Pet.new()
 new_pet.pet_names << new_dog.name
 new_pet.pet_names << Dog.new("Lightning").name
 new_pet.pet_names << Dog.new("Snow").name
+#hopelessly complicated this. Better code is below
+names = ["Jack", "Max", "Brutus"]
+names_added = names.map do |name|
+	name + " is a good dog"
+end
 
 binding.pry
+
+# ended with 4/5 though I also had the attr_accessor in every bit of code despite it being unnecessary
