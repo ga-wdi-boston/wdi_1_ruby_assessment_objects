@@ -68,3 +68,6 @@ these_dogs_are_good_dogs = dog_names.map do |name|
 end
 
 binding.pry
+
+# [1] pry(main)> these_dogs_are_good_dogs
+# => ["Fido is a good dog!", "Rover is a good dog!", "Spot is a good dog!"]
