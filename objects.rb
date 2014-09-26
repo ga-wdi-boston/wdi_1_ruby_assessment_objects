@@ -16,7 +16,7 @@ end
 
 class Pet
 
-  # attr_accessor :name
+  # ***CHANGED***: attr_accessor :name
   # ^ nice to have, but we may not HAVE to access or set the name
   # it's an automatic practice that i stick with "just in case",
   # which not might be very Agile,
